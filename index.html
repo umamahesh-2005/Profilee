@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uma Mahesh Card</title>
+  <style>
+    body {
+      background-color: #f4f6f8;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px;
+    }
+    
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+    }
+    .card img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .card h2 {
+      margin: 10px 0 5px;
+    }
+    .card p {
+      margin: 5px 0;
+      color: gray;
+    }
+    .show-more-btn {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .more-info {
+      display: none;
+      margin-top: 15px;
+      text-align: left;
+    }
+    .more-info ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="pp.jpg" alt="Pavan" />
+    <h2>Uma Mahesh</h2>
+    <p>Mern Stack Developer</p>
+    <p>umamaheshkotni2005@gmailcom</p>
+
+    <button class="show-more-btn" onclick="toggleMore()">Show More</button>
+
+    <div class="more-info" id="moreInfo">
+      <h3>About Me</h3>
+      <p>Passionate full-stack developer with expertise in responsive web apps and user-centric solutions.</p>
+
+      <h3>Skills</h3>
+      <ul>
+        <li>JavaScript, Python, Java</li>
+        <li>HTML5, CSS3, Bootstrap, React.js</li>
+        <li>MongoDB, MySQL</li>
+      </ul>
+
+      <h3>Projects</h3>
+      <ul>
+        <li>Portfolio Website</li>
+        <li>To-do App</li>
+        <li>Weather App</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggleMore() {
+      const moreInfo = document.getElementById("moreInfo");
+      const btn = document.querySelector(".show-more-btn");
+      if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+        moreInfo.style.display = "block";
+        btn.textContent = "Show Less";
+      } else {
+        moreInfo.style.display = "none";
+        btn.textContent = "Show More";
+      }
+    }
+  </script>
+
+</body>
+</html>
